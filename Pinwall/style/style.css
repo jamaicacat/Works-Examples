@@ -1,0 +1,491 @@
+body {
+    font-family: 'Open Sans', serif;
+    font-weight: 300;
+    user-select: none;
+}
+
+.welcome {
+    background-color: #33a088;
+    min-height: 554px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.welcome .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 800px;
+}
+
+.welcome .content .menu {
+    background: url('../img/list.png') no-repeat center/cover;
+    min-width: 228px;
+    min-height: 465px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome .content .menu .logo .logo-container {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome .content .menu .logo .logo-container img {
+    pointer-events: none;
+}
+
+.welcome .content .menu .logo .logo-container img:first-child {
+    width: 42px;
+    height: 38px;
+}
+
+.welcome .content .menu .menu_button {
+    display: none;
+}
+
+.welcome .content .menu nav {
+    padding: 30px;
+    text-align: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.welcome .content .menu nav a {
+    font-size: 16px;
+    line-height: 38px;
+    color: #7e7e7e;
+}
+
+.welcome .content .media {  
+    height: 554px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.welcome .content .media .media-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.welcome .content .media .media-container img {
+    margin: 0 30px;
+}
+
+.welcome .content h2 {
+    text-align: center;
+}
+
+.welcome .content button {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 10px;
+    border: solid 1px #ffffff;
+    border-radius: 7px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.welcome .content button:hover {
+    background-color: #fff;
+    color: #33a088;
+    border-color: #33a088;
+}
+
+.welcome .content .slider {
+    display: flex;
+    align-items: center;
+}
+
+.welcome .content .slider span {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    display: block;
+    transition: 0.1s;
+}
+
+.welcome .content .slider span:nth-child(2) {
+    background-color: #008170;   
+}
+
+.welcome .content .slider span:hover {
+    background-color: #008170;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+.information .partners {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+}
+
+.information .partners span {
+    display: block;
+}
+
+.information .partners .cola {
+    min-width: 163px;
+    height: 53px;
+    background: url('../img/cola.png') no-repeat top/cover;
+}
+
+.information .partners .puma {
+    min-width: 150px;
+    height: 80px;
+    background: url('../img/puma.png') no-repeat top/cover;
+}
+
+.information .partners .bacardi {
+    min-width: 261px;
+    height: 66px;
+    background: url('../img/bac.png') no-repeat top/cover;
+}
+
+.information .partners .nestle {
+    min-width: 158px;
+    height: 62px;
+    background: url('../img/nestle.png') no-repeat top/cover;
+}
+
+.information .information-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 50px;
+    width: 100%;
+    min-height: 376px;
+}
+
+.information .information-text h2 {
+    font-size: 30px;
+    color: #797979;
+    line-height: 49px;
+    margin-bottom: 30px;
+}
+
+.information .information-text p {
+    max-width: 853px;
+    font-size: 14px;
+    color: #8d8d8d;
+    margin-bottom: 30px;
+    line-height: 20px;
+}
+
+.information .information-text > span {
+    padding: 10px 30px;
+    max-width: 180px;
+    border-radius: 4px;
+    background-color: #1dc896;
+    color: white;
+    font-size: 24px;
+}
+
+.text {
+    background-color: #1dc896;
+    min-height: 300px;
+    color: white;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text div {
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 15px 0;
+}
+
+.text div h2 {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 25px;
+}
+
+.map {
+    min-height: 502px;
+    background: url('../img/map.png') no-repeat top/cover;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.map div h2 {
+    font-size: 30px;
+    color: #797979;
+    line-height: 49px;
+}
+
+.map p {
+    font-size: 14px;
+    color: #8d8d8d;
+    line-height: 22px;
+}
+
+.map > div {
+    min-width: 700px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.map div .address {
+    width: 322px;
+    height: 244px;
+    background: url('../img/wind.png') top/cover;    
+    padding: 10px 30px 80px 30px;
+    margin-top: 10px;
+}
+
+.map div .contact {
+    width: 100%;
+    max-width: 350px;
+    min-height: 426px;
+    padding: 20px;
+    border-radius: 6px;
+    border-top: 8px solid #1dc896;
+    background-color: #ffffff;
+}
+
+.map div form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.map div form input {
+    border: solid 1px #d8d8d8;
+    font-size: 14px;
+    padding: 5px 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.map div form textarea {
+    border: solid 1px #d8d8d8;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 15px;
+    max-height: 100px;
+    color: #7e7e7e;
+    resize: none;
+}
+
+.map div form input[type="submit"] {
+    width: 126px;
+    height: 34px;
+    border-radius: 4px;
+    background-color: #1dc896;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*
+    @media (max-width: 980px) {
+        как по-моему, так никаких стилей для адаптации не требуется
+            или всё же есть что изменить?
+}
+*/
+
+
+@media (max-width: 768px) {
+    
+    .welcome .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .welcome .content .menu {
+        background: none;
+        background-color: white;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        min-height: unset;
+    }
+    
+    .welcome .content .menu .logo .logo-container {
+        padding: 15px;
+        border-bottom: none;
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .welcome .content .menu nav {
+        padding: 0;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .welcome .content .menu nav a {
+        padding: 0 5px;
+    }
+    
+    .welcome .content .menu nav a:hover {
+        background-color: #33a088;
+        border-radius: 5px;
+        color: white;
+    }
+    
+    .welcome .content .media {
+        padding: 0 20px;
+    }
+    
+    .information .information-text {
+        padding: 10px 50px;
+    }
+    
+    .information .information-text p {
+        line-height: 18px;
+    }
+    
+    .text div {
+        max-width: 60%;
+        text-align: center;
+    }
+    
+    .text div h2 {
+        margin-bottom: 10px;
+    }
+    
+    .map > div {
+        min-width: unset;
+        width: 100%;
+        padding: 10px 15px 0;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .map div .contact {
+        max-width: 320px;
+    }
+    
+}
+
+@media (max-width: 428px) {
+    
+    .welcome, .information .partners, .information .information-text, .text, .map {
+        min-height: 100vh;
+    }
+    
+    .welcome .content .menu {
+        flex-direction: column;
+    }
+    
+    .welcome .content .menu .logo .logo-container {
+        border: unset;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .welcome .content .menu .menu_button {
+        min-height: 35px;
+        color: #7d7d7d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .welcome .content .menu .menu_button::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        margin-left: 20px;
+        background: url('../img/menu.png') center/cover;
+    }
+    
+    .welcome .content .menu nav {
+        display: none;
+    }
+    
+    .welcome .content .menu .menu_button.open + nav {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #fff;
+        
+        position: fixed;
+        top: 138px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .welcome .content .menu nav a {
+        width: 100%;
+    }
+    
+    .welcome .content .media {
+        padding: 0;
+    }
+    
+    .welcome .content .media .media-container img {
+        margin: 10px 30px;
+    }
+    
+    .information .partners {
+        flex-direction: column;
+    }
+    
+    .information .information-text {
+        padding: 20px 50px;
+    }
+    
+    .information .information-text p {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
+    .map > div {
+        min-width: unset;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .map div .contact {
+        margin: 10px 0;
+    }
+}

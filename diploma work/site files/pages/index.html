@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="КиноМонстр - это портал о кино"/>
+    <meta name="keywords" content="фильмы, фильмы онлайн, смотреть фильмы в hd"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КиноМонстр - портал о кино!</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="shortcut icon" href="../img/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../style/common-style.css">    
+    <link rel="stylesheet" href="../style/content-style.css">
+    <link rel="stylesheet" href="../style/adaptation-style.css">
+</head>
+<body>
+    
+    <header>
+      
+     <div class="heading"> 
+     <img src="../img/icons/camera-anim.svg" alt="image not found">
+        <div>
+         <h1><a href="index.html">КиноМонстр</a></h1>
+         <h2>Кино - наша страсть!</h2>
+        </div>
+     </div>
+        
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span>Навигация по сайту</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" onclick="this.classList.toggle('menu-open')">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./films.html">Фильмы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./series.html">Сериалы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./news.html">Новости</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Что нужно найти?" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Поиск</button>
+          </form>
+        </div>
+     </nav>
+    </header>
+    
+    <main>
+        <section class="site_content">
+           
+            <section class="films-block">
+                <h2>
+                    Фильмы
+                </h2>
+                <div class="films-block__container">
+                    <a href="./cloud.html">
+                        <img src="../img/film-images/cloud.png" alt="image not found">
+                    </a>
+                    <a href="interstellar.html">
+                        <img src="../img/film-images/inter.png" alt="image not found">
+                    </a>
+                    <a href="./matrix.html">
+                        <img src="../img/film-images/matrix.png" alt="image not found">
+                    </a>
+                    <a href="./madmax.html">
+                        <img src="../img/film-images/max.png" alt="image not found">
+                    </a>
+                </div>
+            </section>
+            
+            <section class="films-block">
+                <h2>
+                    Сериалы
+                </h2>
+                <div class="films-block__container">
+                    <a href="./breaking-bad.html">
+                        <img src="../img/film-images/breakingbad.png" alt="image not found">
+                    </a>
+                    <a href="./walking-dead.html">
+                        <img src="../img/film-images/dead.png" alt="image not found">
+                    </a>
+                    <a href="./silicon-valley.html">
+                        <img src="../img/film-images/silicon.png" alt="image not found">
+                    </a>
+                    <a href="x-files.html">
+                        <img src="../img/film-images/xfiles.png" alt="image not found">
+                    </a>
+                </div>
+            </section> 
+            
+        </section>
+        
+        <aside>
+              
+               <div class="sideblock-item login">
+                   <h2>Вход</h2>
+					<form method="post" action="#" id="login_form">
+						<input class="form-control mr-sm-2" type="login" name="login_field" placeholder="Логин" required>
+						<input class="form-control mr-sm-2" type="password" name="password_field" placeholder="Пароль" required>
+						<input class="btn btn-outline-info my-2 my-sm-0" type="submit" class="btn" value="Вход">
+                    </form>
+                    <div>
+				        <a href="#">Забыли пароль?</a> 
+                        <a href="#">Регистрация</a>
+                    </div>
+               </div>
+               
+               <div class="sideblock-item">
+                   <h2><a href="./news.html">Новости</a></h2>
+				   <p>
+				       Всё будет хорошо. И это не новость :&#41;
+				   </p>
+				   <span>29.04.19</span>
+               </div>
+               
+               <div class="sideblock-item">
+                   <h2>Рейтинг фильмов</h2>
+					<ul class="sideblock-item rating-list">
+						<li>
+						    <a href="./matrix.html">Матрица</a>
+						    <span>8.5</span>
+				        </li>
+						<li>
+						    <a href="./interstellar.html">Интерстеллар</a>
+						    <span>8.1</span>
+				        </li>
+						<li>
+						    <a href="./madmax.html">Безумный макс</a>
+						    <span>7.5</span>
+				        </li>
+						<li>
+						    <a href="./atlas.html">Облачный атлас</a>
+						    <span>7.4</span>
+						</li>
+					</ul>
+               </div>
+               
+               <div class="sideblock-item">
+                   <h2>Рейтинг сериалов</h2>
+					<ul class="sideblock-item rating-list">
+						<li>
+						    <a href="./walking-dead.html">Ходячие мертвецы</a>
+						    <span>9.6</span>
+				        </li>
+						<li>
+						    <a href="./x-files.html">Секретные материалы</a>
+						    <span>9</span>
+				        </li>
+						<li>
+						    <a href="./breaking-bad.html">Во все тяжкие</a>
+						    <span>8.8</span>
+				        </li>
+						<li>
+						    <a href="./silicon.html">Кремниевая долина</a>
+						    <span>8.6</span>
+						</li>
+					</ul>
+               </div>
+        </aside>
+    </main>
+    
+    
+  <footer>
+        <p>
+            Все права защищены и принадлежат их владельцам.
+        </p>
+        <p>
+            2019
+        </p>
+  </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

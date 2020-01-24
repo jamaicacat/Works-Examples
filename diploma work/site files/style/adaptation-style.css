@@ -1,0 +1,142 @@
+
+@media (max-width: 980px) {
+    
+    header nav div {
+        text-align: center;
+    }
+    
+    header nav div form {
+        justify-content: flex-end;
+    }
+    
+    aside {
+        display: none;
+    }
+    
+    .site_content {
+        padding: 5px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    main h2 {
+        text-align: center;
+    }
+
+    header .heading {
+        min-height: 100px;
+        justify-content: center;
+    }
+    
+    header .heading img {
+        display: none;
+    }
+    
+    header nav div form.form-inline {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header nav div form input.form-control.mr-sm-2 {
+        margin-right: 10px;
+    }
+    
+    header nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+        padding: 5px 10px;
+    }
+    
+    .news .news-item p + a {
+        transform: scale(1.2);
+        font-weight: 900;
+    }
+}
+
+@media (max-width: 468px) {
+    
+    p {
+        font-weight: 400 !important;
+    }
+    
+    header div h1 {
+        font-size: 40px;
+    }
+    
+    header .heading {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    
+    header .heading div {
+        margin: 0;
+    }
+    
+    main {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    
+    main h2 {
+        font-size: 24px;
+    }
+    
+    main .films-block {
+        padding: 0;
+        margin: 0;
+    }
+    
+    main .films-block h2 {
+        margin: 0;
+    }
+    
+    main p, .film-description__film-parameters ul li, .news .news-item p {
+        font-size: 16px;
+    }
+    
+    .site_content .films > div {
+        flex-direction: column;
+    }
+    
+    .site_content .films > div p {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 360px) {
+    
+    .film-description > h2 {
+        font-size: 36px;
+    }
+    
+    .film-description__film-parameters ul {
+        padding: 10px;
+    }
+    
+    .film-description__film-parameters ul li {
+        margin: 5px 0;
+    }
+    
+    .film-description__film-parameters ul li::before {
+        display: none;
+    }
+    
+    .site_content .news_content img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .site_content .news_content p {
+        text-align: justify;
+    }
+    
+    footer {
+        padding: 0 10px;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+}

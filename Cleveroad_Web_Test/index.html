@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISS info</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="information-container">
+            <div class="location">
+                <h3>
+                    ISS is now located at:
+                </h3>
+                <p class="location-text">
+                    longitude: <span id="longitude"></span>,
+                    latitude: <span id="latitude"></span>
+                </p>
+            </div>
+            <div class="time">
+                <h3>
+                    Current UTC time: <span id="time"></span>
+                </h3>
+                <p id="date"></p>
+            </div>
+        </div>
+        <div class="location-container">
+            <div id='mapid'></div>
+            <script>
+                // assigning map to the variable and setting its view up
+                var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    maxZoom: 15,
+                    id: 'mapbox/streets-v11',
+                    accessToken: 'pk.eyJ1IjoiamFtYWljYWNhdCIsImEiOiJjazYyM2Vuc3owOThoM2tvMGx4b2xqangyIn0.VrBXWCKt8Dnx-mWxB3bSRQ'
+                }).addTo(mymap);
+                
+                // creating and moving marker on the map
+                const latitudeElement = document.getElementById('latitude');
+                const longitudeElement = document.getElementById('longitude');
+                let marker = L.marker([0.0, 0.0]).addTo(mymap);
+                function moveISS() {
+                    $.getJSON('http://api.open-notify.org/iss-now.json?callback', function(data) {
+                        let lat = data['iss_position']['latitude'];
+                        let lon = data['iss_position']['longitude'];
+                        latitudeElement.innerText = lat;
+                        longitudeElement.innerText = lon;
+                        mymap.setView([lat, lon]);
+                        marker.setLatLng([lat, lon]);
+                    });
+                    setTimeout(moveISS, 5000 - (new Date()).getMilliseconds());
+                }
+                moveISS();
+                
+                // date&time setting up
+                const timeElement = document.getElementById('time');
+                const dateElement = document.getElementById('date');
+                formatTime();
+                function formatTime() {
+                    setTimeout(formatTime, 1000 - (new Date()).getMilliseconds());
+                    let date = new Date();
+                    let hours = date.getUTCHours() < 10 ? '0' + date.getUTCHours() : date.getUTCHours();
+                    let minutes = date.getUTCMinutes() < 10 ? '0' + date.getUTCMinutes() : date.getUTCMinutes();
+                    timeElement.innerText = `${hours}:${minutes}`;
+                    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    dateElement.innerText = `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+                }
+                
+                // creating list of astronaunt
+                $.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
+                    let number = data['number'];
+                    $('#spacepeeps').html(number);
+                    let astronautsNumber = document.getElementById('totalAmount');
+                    astronautsNumber.innerText = number;
+                    data['people'].forEach(function(d) {
+                        $('#astronames').append('<li>' + d['name'] + '</li>');
+                    });
+                });
+            </script>
+            <div class="people">
+                <ul id="astronames">
+                </ul>
+                <p>Total amount: <span id="totalAmount"></span> people on ISS</p>
+            </div>
+        </div>
+    </div>
+</body></html>

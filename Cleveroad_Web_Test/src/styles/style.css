@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+}
+
+.information-container {
+    padding-bottom: 15px;
+}
+
+.information-container, .location-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.location {
+    width: 100%;
+    min-width: 600px;
+    margin-right: 10px;
+}
+
+.location-text, #date {
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.location, .time {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.information-container .time {
+    max-width: 600px;
+    min-width: 250px;
+}
+
+#mapid {
+    width: 100%;
+    min-height: 600px;
+    margin-right: 10px;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    max-width: 600px;
+    min-width: 250px;
+    max-height: 400px;
+}
+
+.people ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 15px;
+}
+
+.people ul li {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.people ul li:last-child {
+    margin-bottom: 0;
+}
+
+.people p {
+    text-align: center;
+    padding: 15px;
+}
+
+#astronames li {
+    position: relative;
+    padding-left: 40px;
+}
+
+#astronames li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/astronaut.svg) no-repeat center/cover;
+}
+
+#totalAmount {
+    font-weight: bold;
+}
